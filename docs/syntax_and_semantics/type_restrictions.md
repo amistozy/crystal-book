@@ -109,6 +109,11 @@ A special type restriction is `self`:
 
 ```crystal
 class Person
+  getter name : String
+
+  def initialize(@name)
+  end
+
   def ==(other : self)
     other.name == name
   end
